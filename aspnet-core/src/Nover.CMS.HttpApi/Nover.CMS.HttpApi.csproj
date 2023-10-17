@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Nover.CMS.HttpApi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="E:\NuGetPackages\packages\volo.abp.identity.httpapi\7.4.0\contentFiles\any\net7.0\Volo.Abp.Identity.HttpApi.abppkg.analyze.json" />
+    <Content Remove="E:\NuGetPackages\packages\volo.abp.identity.httpapi\7.4.0\contentFiles\any\net7.0\Volo.Abp.Identity.HttpApi.abppkg.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nover.CMS.Application.Contracts\Nover.CMS.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="7.4.0" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="7.4.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="7.4.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="7.4.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="7.4.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi" Version="7.4.0" />
+    <PackageReference Include="Volo.CmsKit.HttpApi" Version="7.4.0" />
+  </ItemGroup>
+
+</Project>
