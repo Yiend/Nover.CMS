@@ -38,6 +38,7 @@ using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 using Volo.CmsKit.Web;
+using Volo.Abp.AspNetCore.Mvc.UI.Theming;
 
 namespace Nover.CMS.Web;
 
@@ -86,6 +87,13 @@ public class NoverCmsWebModule : AbpModule
     {
         var hostingEnvironment = context.Services.GetHostingEnvironment();
         var configuration = context.Services.GetConfiguration();
+
+        //Configure<AbpThemingOptions>(options =>
+        //{
+        //    options.Themes.Clear();
+        //    options.DefaultThemeName = null;            
+        //});
+
 
         ConfigureAuthentication(context);
         ConfigureUrls(configuration);
