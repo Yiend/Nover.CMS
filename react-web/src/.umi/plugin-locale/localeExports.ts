@@ -3,11 +3,11 @@ import {
   createIntl,
   IntlShape,
   MessageDescriptor,
-} from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/node_modules/react-intl';
+} from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/react-intl';
 import { ApplyPluginsType } from 'umi';
 import { event, LANG_CHANGE_EVENT } from './locale';
 // @ts-ignore
-import warning from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
+import warning from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
 
 import { plugin } from '../core/plugin';
 
@@ -34,40 +34,18 @@ export {
   defineMessages,
   injectIntl,
   useIntl,
-} from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/node_modules/react-intl';
+} from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/react-intl';
 
 let g_intl: IntlShape;
 
 const useLocalStorage = true;
 
-import bnBD0 from 'antd/es/locale/bn_BD';
-import lang_bnBD0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/bn-BD.ts";
 import enUS0 from 'antd/es/locale/en_US';
-import lang_enUS0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/en-US.ts";
-import faIR0 from 'antd/es/locale/fa_IR';
-import lang_faIR0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/fa-IR.ts";
-import idID0 from 'antd/es/locale/id_ID';
-import lang_idID0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/id-ID.ts";
-import jaJP0 from 'antd/es/locale/ja_JP';
-import lang_jaJP0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/ja-JP.ts";
-import ptBR0 from 'antd/es/locale/pt_BR';
-import lang_ptBR0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/pt-BR.ts";
+import lang_enUS0 from "D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/locales/en-US.ts";
 import zhCN0 from 'antd/es/locale/zh_CN';
-import lang_zhCN0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/zh-CN.ts";
-import zhTW0 from 'antd/es/locale/zh_TW';
-import lang_zhTW0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/locales/zh-TW.ts";
+import lang_zhCN0 from "D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/locales/zh-CN.ts";
 
 export const localeInfo: {[key: string]: any} = {
-  'bn-BD': {
-    messages: {
-      ...lang_bnBD0,
-    },
-    locale: 'bn-BD',
-    antd: {
-      ...bnBD0,
-    },
-    momentLocale: 'bn-bd',
-  },
   'en-US': {
     messages: {
       ...lang_enUS0,
@@ -78,46 +56,6 @@ export const localeInfo: {[key: string]: any} = {
     },
     momentLocale: '',
   },
-  'fa-IR': {
-    messages: {
-      ...lang_faIR0,
-    },
-    locale: 'fa-IR',
-    antd: {
-      ...faIR0,
-    },
-    momentLocale: 'fa',
-  },
-  'id-ID': {
-    messages: {
-      ...lang_idID0,
-    },
-    locale: 'id-ID',
-    antd: {
-      ...idID0,
-    },
-    momentLocale: 'id',
-  },
-  'ja-JP': {
-    messages: {
-      ...lang_jaJP0,
-    },
-    locale: 'ja-JP',
-    antd: {
-      ...jaJP0,
-    },
-    momentLocale: 'ja',
-  },
-  'pt-BR': {
-    messages: {
-      ...lang_ptBR0,
-    },
-    locale: 'pt-BR',
-    antd: {
-      ...ptBR0,
-    },
-    momentLocale: 'pt-br',
-  },
   'zh-CN': {
     messages: {
       ...lang_zhCN0,
@@ -127,16 +65,6 @@ export const localeInfo: {[key: string]: any} = {
       ...zhCN0,
     },
     momentLocale: 'zh-cn',
-  },
-  'zh-TW': {
-    messages: {
-      ...lang_zhTW0,
-    },
-    locale: 'zh-TW',
-    antd: {
-      ...zhTW0,
-    },
-    momentLocale: 'zh-tw',
   },
 };
 

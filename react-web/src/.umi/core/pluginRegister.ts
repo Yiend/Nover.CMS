@@ -2,7 +2,7 @@
 import { plugin } from './plugin';
 import * as Plugin_0 from '../../app.tsx';
 import * as Plugin_1 from '@@/plugin-antd-icon-config/app.ts';
-import * as Plugin_2 from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/.umi/plugin-access/rootContainer.ts';
+import * as Plugin_2 from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/.umi/plugin-access/rootContainer.ts';
 import * as Plugin_3 from '../plugin-initial-state/runtime';
 import * as Plugin_4 from '../plugin-locale/runtime.tsx';
 import * as Plugin_5 from '@@/plugin-layout/runtime.tsx';
@@ -18,7 +18,7 @@ import * as Plugin_6 from '../plugin-model/runtime';
   });
   plugin.register({
     apply: Plugin_2,
-    path: 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/src/.umi/plugin-access/rootContainer.ts',
+    path: 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/.umi/plugin-access/rootContainer.ts',
   });
   plugin.register({
     apply: Plugin_3,

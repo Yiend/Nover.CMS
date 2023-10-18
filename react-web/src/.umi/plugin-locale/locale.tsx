@@ -4,13 +4,7 @@ import EventEmitter from 'events';
 import { ConfigProvider } from 'antd';
 
 import moment from 'moment';
-import 'moment/locale/bn-bd';
-import 'moment/locale/fa';
-import 'moment/locale/id';
-import 'moment/locale/ja';
-import 'moment/locale/pt-br';
 import 'moment/locale/zh-cn';
-import 'moment/locale/zh-tw';
 import { RawIntlProvider, getLocale, getDirection , setIntl, getIntl, localeInfo } from './localeExports';
 
 

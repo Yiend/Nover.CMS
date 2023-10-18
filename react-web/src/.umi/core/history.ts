@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory, History } from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/node_modules/umi/node_modules/@umijs/runtime';
+import { createBrowserHistory, History } from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/umi/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"

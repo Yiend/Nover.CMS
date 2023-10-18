@@ -3,13 +3,6 @@
     "en-US": {
       "*": [
         {
-          "path": "/~docs",
-          "title": "Ant Design Pro",
-          "meta": {
-            "order": null
-          }
-        },
-        {
           "title": "Components",
           "path": "/~docs/components",
           "meta": {},

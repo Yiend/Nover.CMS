@@ -6,8 +6,8 @@ import 'antd/dist/antd.less';
 import { plugin } from './core/plugin';
 import './core/pluginRegister';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/node_modules/umi/node_modules/@umijs/runtime';
-import { renderClient } from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/myapp/node_modules/@umijs/renderer-react/dist/index.js';
+import { ApplyPluginsType } from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/umi/node_modules/@umijs/runtime';
+import { renderClient } from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/@umijs/renderer-react/dist/index.js';
 import { getRoutes } from './core/routes';
 
 

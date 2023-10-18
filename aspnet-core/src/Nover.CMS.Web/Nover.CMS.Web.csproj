@@ -69,4 +69,21 @@
     <PackageReference Include="Volo.Abp.SettingManagement.Web" Version="7.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Home\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\uploads\brand\logo.svg" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\options.js" />
+    <None Include="wwwroot\js\plugins\highlight\highlight.pack.js" />
+    <None Include="wwwroot\js\plugins\isotope.pkgd.min.js" />
+    <None Include="wwwroot\js\plugins\jquery.mCustomScrollbar.min.js" />
+    <None Include="wwwroot\js\plugins\progressbar.min.js" />
+    <None Include="wwwroot\js\plugins\slick.min.js" />
+    <None Include="wwwroot\js\vendor\jquery-1.12.4.min.js" />
+    <None Include="wwwroot\js\vendor\modernizr-3.3.1.min.js" />
+  </ItemGroup>
+
 </Project>
