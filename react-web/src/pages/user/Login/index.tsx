@@ -11,8 +11,7 @@ import React, { useState } from 'react';
 import { ProFormCaptcha, ProFormCheckbox, ProFormText, LoginForm } from '@ant-design/pro-form';
 import { useIntl, history, FormattedMessage, SelectLang, useModel } from 'umi';
 import Footer from '@/components/Footer';
-import { login } from '@/services/ant-design-pro/api';
-import { getFakeCaptcha } from '@/services/ant-design-pro/login';
+import { login } from '@/services/user';
 
 import styles from './index.less';
 
@@ -46,11 +45,12 @@ const Login: React.FC = () => {
     }
   };
 
-  const handleSubmit = async (values: API.LoginParams) => {
+  const handleSubmit = async (values: USERAPI.LoginParams) => {
     try {
       // 登录
-      const msg = await login({ ...values, type });
-      if (msg.status === 'ok') {
+      const msg = await login({ ...values });
+      if (msg.access_token) {
+        window.localStorage.setItem("token",msg.access_token)
         const defaultLoginSuccessMessage = intl.formatMessage({
           id: 'pages.login.success',
           defaultMessage: '登录成功！',
@@ -66,7 +66,7 @@ const Login: React.FC = () => {
       }
       console.log(msg);
       // 如果失败去设置用户错误信息
-      setUserLoginState(msg);
+     // setUserLoginState(msg);
     } catch (error) {
       const defaultLoginFailureMessage = intl.formatMessage({
         id: 'pages.login.failure',
@@ -88,10 +88,12 @@ const Login: React.FC = () => {
           title="Nover CMS"
           subTitle="几度梦回诗无意，落日余晖念成痴"
           initialValues={{
+            username:'admin',
+            password:'1q2w3E*',
             autoLogin: true,
           }}        
           onFinish={async (values) => {
-            await handleSubmit(values as API.LoginParams);
+            await handleSubmit(values as USERAPI.LoginParams);
           }}
         >
         

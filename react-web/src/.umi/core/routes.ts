@@ -73,7 +73,7 @@ export function getRoutes() {
             "exact": true,
             "meta": {
               "filePath": "src/components/index.md",
-              "updatedTime": 1697608791161,
+              "updatedTime": 1697632502000,
               "title": "业务组件",
               "sidemenu": false,
               "slugs": [

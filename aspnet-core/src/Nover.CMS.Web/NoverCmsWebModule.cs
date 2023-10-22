@@ -39,6 +39,10 @@ using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 using Volo.CmsKit.Web;
 using Volo.Abp.AspNetCore.Mvc.UI.Theming;
+using System;
+using System.Linq;
+using Microsoft.AspNetCore.Cors;
+using System.Reflection.Metadata;
 
 namespace Nover.CMS.Web;
 
@@ -72,15 +76,23 @@ public class NoverCmsWebModule : AbpModule
             );
         });
 
-        PreConfigure<OpenIddictBuilder>(builder =>
+
+
+        PreConfigure<OpenIddictServerBuilder>(builder =>
         {
-            builder.AddValidation(options =>
-            {
-                options.AddAudiences("CMS");
-                options.UseLocalServer();
-                options.UseAspNetCore();
-            });
+            builder.UseAspNetCore().DisableTransportSecurityRequirement();
         });
+
+        PreConfigure<OpenIddictBuilder>(builder =>
+          {
+
+              builder.AddValidation(options =>
+              {
+                  options.AddAudiences("CMS");
+                  options.UseLocalServer();
+                  options.UseAspNetCore();
+              });
+          });
     }
 
     public override void ConfigureServices(ServiceConfigurationContext context)
@@ -102,6 +114,7 @@ public class NoverCmsWebModule : AbpModule
         ConfigureVirtualFileSystem(hostingEnvironment);
         ConfigureNavigationServices();
         ConfigureAutoApiControllers();
+        ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context.Services);
     }
 
@@ -115,6 +128,7 @@ public class NoverCmsWebModule : AbpModule
         Configure<AppUrlOptions>(options =>
         {
             options.Applications["MVC"].RootUrl = configuration["App:SelfUrl"];
+            options.RedirectAllowedUrls.AddRange(configuration["App:RedirectAllowedUrls"].Split(','));
         });
     }
 
@@ -181,6 +195,29 @@ public class NoverCmsWebModule : AbpModule
             }
         );
     }
+
+    private void ConfigureCors(ServiceConfigurationContext context, IConfiguration configuration)
+    {
+        context.Services.AddCors(options =>
+        {
+            options.AddPolicy("Default", builder =>
+            {
+                builder
+                    .WithOrigins(
+                        configuration["App:CorsOrigins"]
+                            .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                            .Select(o => o.RemovePostFix("/"))
+                            .ToArray()
+                    )
+                    .WithAbpExposedHeaders()
+                    .SetIsOriginAllowedToAllowWildcardSubdomains()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();
+            });
+        });
+    }
+
 
     public override void OnApplicationInitialization(ApplicationInitializationContext context)
     {
