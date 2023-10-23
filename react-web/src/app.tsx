@@ -5,8 +5,7 @@ import type { RunTimeLayoutConfig } from 'umi';
 import { history, Link } from 'umi';
 import RightContent from '@/components/RightContent';
 import Footer from '@/components/Footer';
-import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
-import { BookOutlined, LinkOutlined } from '@ant-design/icons';
+import { getInfo as queryCurrentUser } from './services/user';
 import defaultSettings from '../config/defaultSettings';
 
 const loginPath = '/user/login';
@@ -21,9 +20,9 @@ export const initialStateConfig = {
  * */
 export async function getInitialState(): Promise<{
   settings?: Partial<LayoutSettings>;
-  currentUser?: API.CurrentUser;
+  currentUser?: USERAPI.CurrentUser;
   loading?: boolean;
-  fetchUserInfo?: () => Promise<API.CurrentUser | undefined>;
+  fetchUserInfo?: () => Promise<USERAPI.CurrentUser | undefined>;
 }> {
   const fetchUserInfo = async () => {
     try {
