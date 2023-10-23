@@ -17,8 +17,6 @@ const clientSetting = {
 export async function login(body: USERAPI.LoginParams) {
   clientSetting.username = body.username.trim();
   clientSetting.password = body.password;
-
-  console.log(clientSetting);
   return request<USERAPI.LoginResult>('/connect/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -33,6 +31,7 @@ export async function getInfo() {
   });
 }
 
+/** Token 修改用户信息 PUT /api/account/my-profile */
 export async function setUserInfo(body: USERAPI.UpdateProfileParams) {
   return request('/api/account/my-profile', {
     method: 'PUT',
@@ -40,6 +39,7 @@ export async function setUserInfo(body: USERAPI.UpdateProfileParams) {
   });
 }
 
+/** Token 修改用户信息 PUT /api/account/my-profile/change-password */
 export async function changePassword(body: USERAPI.ChangePasswordParams) {
   return request('/api/account/my-profile/change-password', {
     method: 'POST',
