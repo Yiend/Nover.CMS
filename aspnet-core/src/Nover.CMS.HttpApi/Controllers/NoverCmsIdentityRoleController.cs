@@ -20,6 +20,12 @@ namespace Nover.CMS.HttpApi.Controllers
             RoleAppService = roleAppService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="roleId"></param>
+        /// <param name="ouId"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("{roleId}/add-to-organization/{ouId}")]
         public virtual Task AddToOrganizationUnitAsync(Guid roleId, Guid ouId)
@@ -27,6 +33,11 @@ namespace Nover.CMS.HttpApi.Controllers
             return RoleAppService.AddToOrganizationUnitAsync(roleId, ouId);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("create-to-organization")]
         public Task<IdentityRoleDto> CreateAsync(IdentityRoleOrgCreateDto input)

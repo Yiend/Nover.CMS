@@ -25,12 +25,21 @@ namespace Nover.CMS.HttpApi.Controllers
             ClaimTypeAppService = claimTypeAppService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpGet]
         public virtual Task<PagedResultDto<ClaimTypeDto>> GetListAsync(GetIdentityClaimTypesInput input)
         {
             return this.ClaimTypeAppService.GetListAsync(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [Route("all")]
         [HttpGet]
         public virtual Task<List<ClaimTypeDto>> GetAllListAsync()
@@ -38,6 +47,11 @@ namespace Nover.CMS.HttpApi.Controllers
             return this.ClaimTypeAppService.GetAllListAsync();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Route("{id}")]
         [HttpGet]
         public virtual Task<ClaimTypeDto> GetAsync(Guid id)
@@ -45,12 +59,23 @@ namespace Nover.CMS.HttpApi.Controllers
             return this.ClaimTypeAppService.GetAsync(id);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpPost]
         public virtual Task<ClaimTypeDto> CreateAsync(CreateClaimTypeDto input)
         {
             return this.ClaimTypeAppService.CreateAsync(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpPut]
         [Route("{id}")]
         public virtual Task<ClaimTypeDto> UpdateAsync(Guid id, UpdateClaimTypeDto input)
@@ -58,6 +83,11 @@ namespace Nover.CMS.HttpApi.Controllers
             return this.ClaimTypeAppService.UpdateAsync(id, input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Route("{id}")]
         [HttpDelete]
         public virtual Task DeleteAsync(Guid id)
