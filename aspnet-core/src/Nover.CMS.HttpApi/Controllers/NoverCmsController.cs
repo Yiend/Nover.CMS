@@ -1,7 +1,7 @@
 ﻿using Nover.CMS.Localization;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace Nover.CMS.Controllers;
+namespace Nover.CMS.HttpApi.Controllers;
 
 /* Inherit your controllers from this class.
  */

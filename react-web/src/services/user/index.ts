@@ -10,7 +10,6 @@ const clientSetting = {
   username: '',
   password: '',
   client_id: 'CMS_App',
-  //client_secret: '1q2w3e*'
 };
 
 /** 登录接口 POST /api/login/account */
@@ -24,14 +23,14 @@ export async function login(body: USERAPI.LoginParams) {
   });
 }
 
-/** Token 获取用户信息 GET /api/account/my-profile */
+/** 获取用户信息 GET /api/account/my-profile */
 export async function getInfo() {
   return request<USERAPI.CurrentUser>('/api/account/my-profile', {
     method: 'GET',
   });
 }
 
-/** Token 修改用户信息 PUT /api/account/my-profile */
+/** 修改用户信息 PUT /api/account/my-profile */
 export async function setUserInfo(body: USERAPI.UpdateProfileParams) {
   return request('/api/account/my-profile', {
     method: 'PUT',
@@ -39,7 +38,7 @@ export async function setUserInfo(body: USERAPI.UpdateProfileParams) {
   });
 }
 
-/** Token 修改用户信息 PUT /api/account/my-profile/change-password */
+/** 修改用户信息 PUT /api/account/my-profile/change-password */
 export async function changePassword(body: USERAPI.ChangePasswordParams) {
   return request('/api/account/my-profile/change-password', {
     method: 'POST',
