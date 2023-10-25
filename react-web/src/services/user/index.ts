@@ -1,6 +1,9 @@
 import { request } from 'umi';
 import qs from 'querystring';
 
+/**
+ * Auth 2.0请求参数
+ */
 const clientSetting = {
   grant_type: 'password',
   issuer: 'https://localhost:44356',
@@ -12,7 +15,11 @@ const clientSetting = {
   client_id: 'CMS_App',
 };
 
-/** 登录接口 POST /api/login/account */
+/**
+ * 登录接口
+ * @param {USERAPI.LoginParams} body
+ * @method POST
+ */
 export async function login(body: USERAPI.LoginParams) {
   clientSetting.username = body.username.trim();
   clientSetting.password = body.password;
@@ -23,14 +30,22 @@ export async function login(body: USERAPI.LoginParams) {
   });
 }
 
-/** 获取用户信息 GET /api/account/my-profile */
+/**
+ * 获取用户信息
+ * @param
+ * @method GET
+ */
 export async function getInfo() {
   return request<USERAPI.CurrentUser>('/api/account/my-profile', {
     method: 'GET',
   });
 }
 
-/** 修改用户信息 PUT /api/account/my-profile */
+/**
+ * 修改用户信息
+ * @param {USERAPI.UpdateProfileParams} body
+ * @method PUT
+ */
 export async function setUserInfo(body: USERAPI.UpdateProfileParams) {
   return request('/api/account/my-profile', {
     method: 'PUT',
@@ -38,7 +53,11 @@ export async function setUserInfo(body: USERAPI.UpdateProfileParams) {
   });
 }
 
-/** 修改用户信息 PUT /api/account/my-profile/change-password */
+/**
+ * 修改密码
+ * @param {USERAPI.ChangePasswordParams} body
+ * @method POST
+ */
 export async function changePassword(body: USERAPI.ChangePasswordParams) {
   return request('/api/account/my-profile/change-password', {
     method: 'POST',

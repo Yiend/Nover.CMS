@@ -5,7 +5,6 @@ import { transformAbpListQuery } from '../../utils/abp';
  * 获取用户信息
  * @param {object} query
  * @method GET
- * @returns {IdentityAPI.IdentityUser}
  */
 export async function getUsers(query: object) {
   return request<IdentityAPI.IdentityUser>('/api/identity/users', {
@@ -18,7 +17,6 @@ export async function getUsers(query: object) {
  * 根据用户Id,获取用户信息
  * @param {string} id
  * @method GET
- * @returns {IdentityAPI.IdentityUser}
  */
 export async function getUserById(id: string) {
   return request<IdentityAPI.IdentityUser>(`/api/identity/users/${id}`, {
@@ -30,7 +28,6 @@ export async function getUserById(id: string) {
  * 创建用户
  * @param {IdentityAPI.IdentityUserCreateParams} body
  * @method POST
- * @returns {IdentityAPI.IdentityUser}
  */
 export async function createUser(body: IdentityAPI.IdentityUserCreateParams) {
   return request<IdentityAPI.IdentityUser>('/api/identity/users', {
@@ -43,7 +40,6 @@ export async function createUser(body: IdentityAPI.IdentityUserCreateParams) {
  * 创建用户到组织
  * @param {IdentityAPI.IdentityUserCreateParams} body
  * @method POST
- * @returns {IdentityAPI.IdentityUser}
  */
 export async function createUserToOrg(body: IdentityAPI.IdentityUserOrgCreateParams) {
   return request<IdentityAPI.IdentityUser>('/api/identity/users/create-to-organizations', {
@@ -56,7 +52,6 @@ export async function createUserToOrg(body: IdentityAPI.IdentityUserOrgCreatePar
  * 修改用户信息
  * @param {IdentityAPI.IdentityUserUpdateParams} body
  * @method PUT
- * @returns {IdentityAPI.IdentityUser}
  */
 export async function updateUser(body: IdentityAPI.IdentityUserUpdateParams) {
   return request<IdentityAPI.IdentityUser>(`/api/identity/users/${body.id}`, {
@@ -69,7 +64,6 @@ export async function updateUser(body: IdentityAPI.IdentityUserUpdateParams) {
  * 修改用户信息到组织
  * @param {IdentityAPI.IdentityUserUpdateParams} body
  * @method PUT
- * @returns {IdentityAPI.IdentityUser}
  */
 export async function updateUserToOrg(body: IdentityAPI.IdentityUserOrgUpdateParams) {
   return request<IdentityAPI.IdentityUser>(
@@ -85,7 +79,6 @@ export async function updateUserToOrg(body: IdentityAPI.IdentityUserOrgUpdatePar
  * 删除用户
  * @param {string} id
  * @method DELETE
- * @returns
  */
 export async function deleteUser(id: string) {
   return request(`/api/identity/users/${id}`, {
@@ -97,7 +90,6 @@ export async function deleteUser(id: string) {
  * 获取用户角色
  * @param {string} id
  * @method GET
- * @returns
  */
 export async function getRolesByUserId(id: string) {
   return request(`/api/identity/users/${id}/roles`, {
@@ -109,7 +101,6 @@ export async function getRolesByUserId(id: string) {
  * 获取可分配的角色
  * @param
  * @method GET
- * @returns
  */
 export async function getAssignableRoles() {
   return request('/api/identity/users/assignable-roles', {
@@ -121,7 +112,6 @@ export async function getAssignableRoles() {
  * 根据用户，获取组织
  * @param
  * @method GET
- * @returns
  */
 export async function getOrganizationsByUserId(id: string, includeDetails: boolean = false) {
   return request(`/api/identity/users/${id}/organizations`, {
@@ -133,9 +123,8 @@ export async function getOrganizationsByUserId(id: string, includeDetails: boole
 /**
  * 添加成员到组织单元中
  * @param {string} id
- * @param {Array} ouId
+ * @param {Array} ouIds
  * @method POST
- * @returns
  */
 export function addToOrganization(id: string, ouIds: string[]) {
   return request(`/api/identity/users/${id}/add-to-organizations`, {

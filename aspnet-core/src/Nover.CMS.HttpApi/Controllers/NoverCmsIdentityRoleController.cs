@@ -21,7 +21,7 @@ namespace Nover.CMS.HttpApi.Controllers
         }
 
         /// <summary>
-        /// 
+        /// 添加角色到组织单位
         /// </summary>
         /// <param name="roleId"></param>
         /// <param name="ouId"></param>
@@ -34,7 +34,7 @@ namespace Nover.CMS.HttpApi.Controllers
         }
 
         /// <summary>
-        /// 
+        /// 创建角色到组织单位
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
