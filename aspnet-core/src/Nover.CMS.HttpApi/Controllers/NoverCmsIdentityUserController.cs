@@ -49,7 +49,7 @@ namespace Nover.CMS.HttpApi.Controllers
         }
 
         /// <summary>
-        /// 
+        /// 获取组织单位列表
         /// </summary>
         /// <param name="id"></param>
         /// <param name="includeDetails"></param>
@@ -62,7 +62,7 @@ namespace Nover.CMS.HttpApi.Controllers
         }
 
         /// <summary>
-        /// 
+        /// 更新到组织单位
         /// </summary>
         /// <param name="id"></param>
         /// <param name="input"></param>
