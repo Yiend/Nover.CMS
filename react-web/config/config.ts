@@ -83,6 +83,19 @@ export default defineConfig({
       ],
     },
     {
+      path: '/identity',
+      icon: 'user',
+      name: '希望',
+      routes: [
+        {
+          name: 'Users',
+          icon: 'smile',
+          path: '/users',
+          component: './pages/identity/users',          
+        },
+      ],
+    },
+    {
       path: '/form',
       icon: 'form',
       name: 'form',
