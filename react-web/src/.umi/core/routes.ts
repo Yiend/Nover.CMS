@@ -196,6 +196,20 @@ export function getRoutes() {
         ]
       },
       {
+        "path": "/identity",
+        "icon": "user",
+        "name": "希望",
+        "routes": [
+          {
+            "name": "Users",
+            "icon": "smile",
+            "path": "/users",
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__pages__identity__users' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/pages/identity/users'), loading: LoadingComponent}),
+            "exact": true
+          }
+        ]
+      },
+      {
         "path": "/form",
         "icon": "form",
         "name": "form",
