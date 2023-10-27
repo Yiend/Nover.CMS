@@ -1,245 +1,639 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-cn">
+<html class="bit-html mobile-false js_active  vc_desktop  vc_transform  vc_transform  csstransforms csstransforms3d csstransitions no-touch" dir="ltr" lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta content="" name="author">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
     <title>@ViewBag.Title</title>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://5dbf968054c17.t74.qifeiye.com/xmlrpc.php">
 
-    <link rel="icon" href="/favicon.ico">
-
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
-    <!-- Global styles START -->
-    <link rel="stylesheet" href="/metronic/assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/metronic/assets/plugins/bootstrap/css/bootstrap.min.css">
-    <!-- Global styles END -->
-    <!-- Page level plugin styles START -->
-    <link rel="stylesheet" href="/metronic/assets/pages/css/animate.css">
-    <link rel="stylesheet" href="/metronic/assets/plugins/owl.carousel/assets/owl.carousel.css">
-    <!-- Page level plugin styles END -->
-    <!-- Theme styles START -->
-    <link rel="stylesheet" href="/metronic/assets/pages/css/components.css">
-    <link rel="stylesheet" href="/metronic/assets/pages/css/slider.css">
-    <link rel="stylesheet" href="/metronic/assets/corporate/css/style.css">
-    <link rel="stylesheet" href="/metronic/assets/pages/css/portfolio.css">
-    <link rel="stylesheet" href="/metronic/assets/corporate/css/style-responsive.css">
-    <link rel="stylesheet" href="/metronic/assets/corporate/css/themes/red.css">
-    <link rel="stylesheet" href="/css/theme-styles.css">
-    <!-- Theme styles END -->
-</head>
-<body class="corporate">
-    <!-- BEGIN TOP BAR -->
-    <div class="pre-header">
-        <div class="container">
-            <div class="row">
-                <!-- BEGIN TOP BAR LEFT PART -->
-                <div class="col-md-6 col-sm-6 col-xs-9 additional-shop-info">
-                    <ul class="list-unstyled list-inline">
-                        <li><i class="fa fa-phone"></i><span>716-472-4484</span></li>
-                        <li><i class="fa fa-envelope-o"></i><span>ptsteadman@gmail.com</span></li>
-                    </ul>
-                </div>
-                <!-- END TOP BAR LEFT PART -->
-                <!-- BEGIN TOP BAR MENU -->
-                <div class="col-md-6 col-sm-6 col-xs-3 additional-nav">
-                    <ul class="list-unstyled list-inline pull-right">
-                        <li><a href="/login">Log In</a></li>
-                    </ul>
-                </div>
-                <!-- END TOP BAR MENU -->
-            </div>
-        </div>
-    </div>
-    <!-- END TOP BAR -->
-    <!-- BEGIN HEADER -->
-    <div class="header">
-        <div class="container">
-
-            <a class="site-logo" href="/">
-                <img src="/metronic/assets/corporate/img/logos/logo-corp-red.png" alt="Metronic FrontEnd">
-            </a>
-
-            <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
-
-            <!-- BEGIN NAVIGATION -->
-            <div class="header-navigation pull-right font-transform-inherit">
-                <ul>
-
-                    <li class="active"><a href="/">Home</a></li>
-                    <li class=""><a href="/projects/">Projects</a></li>
-                    <li class=""><a href="/archives/">Blog</a></li>
-                    <li class=""><a href="/contact/">Contact</a></li>
-                    <li class=""><a href="/about/">About</a></li>
-
-                    <!-- BEGIN TOP SEARCH -->
-                    <li class="menu-search">
-                        <span class="sep"></span>
-                        <i class="fa fa-search search-btn"></i>
-                        <div class="search-box">
-                            <form action="#">
-                                <div class="input-group">
-                                    <input type="text" placeholder="Search" class="form-control st-default-search-input">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-primary" type="submit">Search</button>
-                                    </span>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-                    <!-- END TOP SEARCH -->
-                </ul>
-            </div>
-            <!-- END NAVIGATION -->
-        </div>
-    </div>
-    <!-- Header END -->
-    @RenderBody()
-
-
-    <!-- BEGIN PRE-FOOTER -->
-    <div class="pre-footer">
-        <div class="container">
-            <div class="row">
-                <!-- BEGIN BOTTOM ABOUT BLOCK -->
-                <div class="col-md-4 col-sm-6 pre-footer-col">
-                    <h2>About Us</h2>
-                    <p>Computer Lab is a software development and marketing company based in Brooklyn, New York. <br><br> Computer Lab was founded in 2015, and is focused on blah blah blah.</p>
-                </div>
-                <!-- END BOTTOM ABOUT BLOCK -->
-                <!-- BEGIN BOTTOM CONTACTS -->
-                <div class="col-md-4 col-sm-6 pre-footer-col">
-                    <h2>Contact</h2>
-                    <address class="margin-bottom-40">
-                        140 Metropolitan Avenue<br>
-                        5th Floor<br>
-                        Brooklyn, NY 11249<br>
-                        Phone: 716-472-4484<br>
-                        Email: <a href="mailto:ptsteadman@gmail.com">ptsteadman@gmail.com</a><br>
-                    </address>
-                </div>
-                <!-- END BOTTOM CONTACTS -->
-                <!-- BEGIN TWITTER BLOCK -->
-                <div class="col-md-4 col-sm-6 pre-footer-col">
-
-                    <a data-tweet-limit="1" class="twitter-timeline"
-                       href="https://twitter.com/computerlab_" data-widget-id="678830341331820544">Tweets by @DateTime.Now.Year</a>
-
-                    <script>
-                        !function (d, s, id) {
-                            var
-                            js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); }
-                        }(document, "script", "twitter-wjs");</script>
-
-                </div>
-                <!-- END TWITTER BLOCK -->
-
-            </div>
-        </div>
-    </div>
-    <!-- END PRE-FOOTER -->
-
-    <!-- BEGIN FOOTER -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- BEGIN COPYRIGHT -->
-                <div class="col-md-6 col-sm-6 padding-top-10">
-                    &copy; 2017 Corporate Frontend<br>
-                    <a href="javascript:;">Privacy Policy</a> | <a href="javascript:;">Terms of Service</a>
-                </div>
-                <!-- END COPYRIGHT -->
-                <!-- BEGIN SOCIAL -->
-                <div class="col-md-6 col-sm-6">
-                    <ul class="social-footer list-unstyled list-inline pull-right">
-
-                        <li><a href="https://github.com/ptsteadman"><i class="fa fa-github"></i></a></li>
-                        <li><a href="https://twitter.com/ptsteadman"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com/ptsteadman"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="/atom.xml"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="https://linkedin.com/in/ptsteadman"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="http://stackoverflow.com/users/2480493/patrick-steadman"><i class="fa fa-stackoverflow"></i></a></li>
-
-                    </ul>
-                </div>
-                <!-- END SOCIAL -->
-
-            </div>
-        </div>
-    </div>
-    <!-- END FOOTER -->
-
-
-    <!-- BEGIN CORE PLUGINS (REQUIRED FOR ALL PAGES) -->
     <!--[if lt IE 9]>
-    <script src="/metronic/assets/plugins/respond.min.js"></script>
+    <script src="https://5dbf968054c17.t74.qifeiye.com/FeiEditor/bitSite/js/html5shiv.min.js"></script>
     <![endif]-->
-    <script src="/metronic/assets/plugins/jquery.min.js"></script>
-    <script src="/metronic/assets/plugins/jquery-migrate.min.js"></script>
-    <script src="/metronic/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/metronic/assets/corporate/scripts/back-to-top.js"></script>
-    <script src="/metronic/assets/plugins/owl.carousel/owl.carousel.min.js"></script>
-    <script src="/metronic/assets/corporate/scripts/layout.js"></script>
-    <script src="/js/wow.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://5dbf968054c17.t74.qifeiye.com/FeiEditor/bitSite/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css" id="static-stylesheet"></style>
+    <link rel="stylesheet" href="./blog/css/6cd295f8d4264e028005f0b44da101f2.css" type="text/css" media="all">
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript" src="./blog/js/jquery.js"></script>
+    <script>var geURL = 'https://5dbf968054c17.t74.qifeiye.com/ge/index.html?embed=1&ui=embed&spin=1&modified=unsavedChanges&proto=json&lang=zh';</script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://5dbf968054c17.t74.qifeiye.com/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://5dbf968054c17.t74.qifeiye.com/qfy-includes/wlwmanifest.xml">
+
+    <link rel="canonical" href="https://5dbf968054c17.t74.qifeiye.com/">
+    <link rel="shortlink" href="https://5dbf968054c17.t74.qifeiye.com/?p=11258">
+
+    @RenderSection("styles")
+    <style class="style_0">
+        .bitRightSider .widget-title, .bitLeftSider .widget-title {
+            padding: 0 0 0 10px;
+            height: 35px;
+            line-height: 35px;
+            background-color: transparent;
+            margin: 0px;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            text-decoration: none;
+            color: #acc4ac;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+            background-image: none;
+            -webkit-border-top-left-radius: 0;
+            -webkit-border-top-right-radius: 0;
+            -moz-border-radius-topleft: 0;
+            -moz-border-radius-topright: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .bitRightSider .widget-title, .bitLeftSider .widget-title {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+        }
+
+        .bitRightSider .bitWidgetFrame, .bitLeftSider .bitWidgetFrame {
+            border-bottom: 0;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            padding: 4px 10px 4px 10px;
+        }
+
+        .bitRightSider .site_tooler, .bitLeftSider .site_tooler {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .bitRightLeftSiderWidget.site_tooler .bitWidgetFrame, .bitRightLeftSiderWidget.site_tooler .bitWidgetFrame {
+            background-color: transparent;
+            background-image: none;
+            background-repeat: repeat;
+            -webkit-border-bottom-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            -webkit-border-bottom-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        body .bitRightSider .bitWidgetFrame, .bitLeftSider .bitWidgetFrame {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }</style>
+    <style class="style_0">
+        .footer .widget-title {
+            padding: 0 0 0 10px;
+            height: 28px;
+            line-height: 28px;
+            background-color: #ffffff;
+            margin: 0px;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: none;
+            color: #0099cc;
+            border-top: 0px solid rgba(2,72,134,1);
+            border-bottom: 1px solid rgba(221,221,221,1);
+            border-left: 0px solid rgba(2,72,134,1);
+            border-right: 0px solid rgba(2,72,134,1);
+            background-image: none;
+            -webkit-border-top-left-radius: 0;
+            -webkit-border-top-right-radius: 0;
+            -moz-border-radius-topleft: 0;
+            -moz-border-radius-topright: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .footer .bitWidgetFrame {
+            border-top: 0px solid rgba(186,186,186,1);
+            border-bottom: 0px solid rgba(186,186,186,1);
+            border-left: 0px solid rgba(186,186,186,1);
+            border-right: 0px solid rgba(186,186,186,1);
+            padding: 4px 10px 4px 10px;
+            -webkit-border-bottom-left-radius: 0;
+            -webkit-border-bottom-right-radius: 0;
+            -moz-border-radius-bottomleft: 0;
+            -moz-border-radius-bottomright: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .footer .site_tooler {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+            .footer .site_tooler .bitWidgetFrame {
+                background-color: transparent;
+                background-image: none;
+                background-repeat: repeat;
+                -webkit-border-bottom-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                -webkit-border-bottom-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+    </style>
+    <style type="text/css">
+    </style>
+
+</head>
 
 
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<body class="home page page-id-11258 page-template-default image-blur widefull_header2 widefull_topbar2 mobile-autotable btn-flat content-fullwidth qfe-js-composer js-comp-ver-4.0.1 vc_responsive mobilefloatmenu" data-pid="11258" data-pkey="0f8ec97d77e652e2ae4dca3ae86fe5f2">
+    <div class="dl-menuwrapper  wf-mobile-visible floatmenu floatwarpper left">
+        <div class="dl-container">
+            <ul data-st="0" data-sp="0" data-fh="0" data-mw="1280" data-lh="26" class="dl-menu" data-bit-menu="underline-hover" data-bit-float-menu="underline-hover">
+                <li class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-11258 current_page_item bit-menu-post-id-11258 menu-item-11494 act first">
+                    <a href="https://5dbf968054c17.t74.qifeiye.com/"><span>主页<i class="underline"></i></span></a>
+                </li>
+                <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-13046 menu-item-13047">
+                    <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=13046"><span>生活<i class="underline"></i></span></a>
+                </li>
+                <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-13098 menu-item-13099">
+                    <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=13098"><span>技术<i class="underline"></i></span></a>
+                </li>
+                <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-7609 menu-item-13502">
+                    <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=7609"><span>关于我<i class="underline"></i></span></a>
+                </li>
+                <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-12490 menu-item-12491">
+                    <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=12490"><span>联系<i class="underline"></i></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+
+    <div id="page" backgroundsize="true" class=" wide ">
+        <div id="dl-menu" class="dl-menuwrapper wf-mobile-visible floatmenu left" style="right: 8px; top: 0px;">
+            <a data-padding="" data-top="0" data-right="8" rel="nofollow" id="mobile-menu" class="glyphicon glyphicon-icon-align-justify floatmenu left firstopensub">
+                <span class="menu-open  phone-text">首页</span>
+                <span class="menu-close">关闭</span>
+                <span class="menu-back">返回上一级</span>
+                <span class="wf-phone-visible">&nbsp;</span>
+            </a>
+        </div>
+
+
+
+        <!-- left, center, classical, classic-centered -->
+        <!-- !Header -->
+        <header id="header" class="logo-left-right  hl headerPM menuPosition" role="banner">
+            <!-- class="overlap"; class="logo-left", class="logo-center", class="logo-classic" -->
+            <div class="wf-wrap">
+                <div class="wf-table">
+                    <div id="branding" class="wf-td bit-logo-bar" style="width:200px;">
+                        <a class="bitem logo  fixedwidth nomarl" style="display: table-cell;" href="https://5dbf968054c17.t74.qifeiye.com/">
+                            <span class="logospan">
+                                <img class="preload-me" src="./简介博客模板_files/aHR0cHM6Ly81ZGJmOTY4MDU0YzE3LnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMTAvMjc2NjQ4MzdiZWMzOGJiYjQyZmFkZDBkYTRjMzQ1ZWQtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" width="200" height="200" alt="简介博客模板">
+                            </span>
+                        </a>
+                        <div class="bitem text" style="display: table-cell;vertical-align: middle;">
+                            <a href="https://5dbf968054c17.t74.qifeiye.com/" style="text-decoration: none;">
+                                <div id="bit-logoText" data-margin-left="8" style="position:relative;font-size:16px;  margin-left:8px;">
+                                    <div class="logotext_outner">
+                                        <div class="logotext_inner">
+                                            <span style="color: rgb(68, 68, 68);">
+                                                <span style="font-family: arial;">
+                                                    <span style="font-size: 22px;">BLOG</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <section id="bit-floatlogoText" style="display:none;">
+                            <section class="floatlogoText" style="vertical-align: middle;padding-left:8px;">
+                                <span style="color: rgb(68, 68, 68);">
+                                    <span style="font-family: arial;">
+                                        <span style="font-size: 22px;">BLOG</span>
+                                    </span>
+                                </span>
+                            </section>
+                        </section>
+                        <!-- <div id="site-title" class="assistive-text"></div>
+                        <div id="site-description" class="assistive-text"></div> -->
+                    </div>
+
+                    <!-- !- Navigation -->
+                    <nav style="0" id="navigation" class="wf-td" bitdataaction="site_menu_container" bitdatalocation="primary">
+                        <ul id="main-nav" data-st="0" data-sp="0" data-fh="0" data-mw="1280" data-lh="26" class="mainmenu fancy-rollovers wf-mobile-hidden bit-menu-default underline-hover position-ab-center ab-center" data-bit-menu="underline-hover" data-bit-float-menu="underline-hover" style="text-align: center; left: -57.5px;">
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-11258 current_page_item bit-menu-post-id-11258 menu-item-11494 act first">
+                                <a href="https://5dbf968054c17.t74.qifeiye.com/"><span>主页<i class="underline"></i></span></a>
+                            </li>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-13046 menu-item-13047">
+                                <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=13046"><span>生活<i class="underline"></i></span></a>
+                            </li>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-13098 menu-item-13099">
+                                <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=13098"><span>技术<i class="underline"></i></span></a>
+                            </li>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-7609 menu-item-13502">
+                                <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=7609"><span>关于我<i class="underline"></i></span></a>
+                            </li>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-12490 menu-item-12491">
+                                <a href="https://5dbf968054c17.t74.qifeiye.com/?page_id=12490"><span>联系<i class="underline"></i></span></a>
+                            </li>
+                        </ul>
+                        <div id="dl-menu" class="dl-menuwrapper wf-mobile-visible main-mobile-menu left" style="display: none; right: 8px; top: 0px;"></div>
+                    </nav>
+                    <div style="display:none;" id="main-nav-slide">
+                        <div class="main-nav-slide-inner" data-class="align_right">
+                            <div class="floatmenu-bar-right bit_widget_more" bitdatamarker="bitHeader-3" bitdataaction="site_fix_container" bitdatacolor="white">
+                                <div id="bit_postlist-12" style="margin-bottom:0;" class="headerWidget_1 widget_text site_tooler">
+                                    <div class="bitWidgetFrame ">
+                                        <div id="vc_img_652be7fe44dd5782" style="padding:0px;margin:0px;clear:both;position:relative;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-position:0 0;background-repeat: no-repeat;" m-padding="0px 0px 0px 0px" p-padding="0 0 0 0" css_animation_delay="0" qfyuuid="" data-anitime="0.7" data-ani_iteration_count="1" class="qfy-element bitImageControlDiv ">
+                                            <style>
+                                                @@media only screen and (max-width: 768px) {
+                                                    .single_image_text-652be7fe44e00411 .head {
+                                                        font-size: 16px !important;
+                                                    }
+
+                                                    .single_image_text-652be7fe44e00411 .content {
+                                                        font-size: 16px !important;
+                                                    }
+                                                }
+                                            </style>
+                                            <a class="bitImageAhover   inlineblock " thumbpath="" href="http://w-51969-38056-92975.10615179203.sites.cnfree07.qifeiye.com/?page_id=6432">
+                                                <div class="bitImageParentDiv qfe_single_image qfe_content_element vc_align_right">
+                                                    <div class="qfe_wrapper">
+                                                        <span></span>
+                                                        <span class="single_two_images " style="display:inline-block;max-width:100%;font-size:0;position:relative;">
+                                                            <img class="front_image   ag_image" src="./简介博客模板_files/aHR0cHM6Ly81ZGJmOTY4MDU0YzE3LnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMTAvNmU1Mzk0MjBiNDQ2ZTRhOTI0NmEzZGVmYTM4OGI5MmEtMjV4MjUtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" alt="搜索" description="" data-attach-id="12679" data-title="搜索" title="" src-img="" style="">
+                                                            <img class=" scenery_image   ag_image" src="./简介博客模板_files/aHR0cHM6Ly81ZGJmOTY4MDU0YzE3LnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMTAvOGZlMDQxYmJhZjkwOTcwNWE4ZTE5YWM2Mzc3YjcwMTUtMjV4MjUtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" alt="搜索(1)" description="" data-attach-id="12678" data-title="搜索(1)" title="" src-img="" style="position:absolute;left:0;top:0;opacity: 0;">
+                                                            <i></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <a class="bitImageAhover   inlineblock " thumbpath="" href="http://w-51969-38056-92975.10615179203.sites.cnfree07.qifeiye.com/?page_id=6432"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wf-td assistive-info align_right 0 mobilealign_right 0" role="complementary" style="">
+                        <div class="top-bar-right right bit_widget_more" bitdatamarker="bitHeader-2" bitdataaction="site_fix_container" bitdatacolor="white" style="">
+                            <div id="bit_postlist-11" style="margin-top:0;margin-bottom:0;" class="mobileHidden headerWidget_1 widget_text site_tooler">
+                                <div class="bitWidgetFrame ">
+                                    <div id="vc_img_652be7fe4558d549" style="padding:0px;margin:0px;clear:both;position:relative;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-position:0 0;background-repeat: no-repeat;" m-padding="0px 0px 0px 0px" p-padding="0 0 0 0" css_animation_delay="0" qfyuuid="" data-anitime="0.7" data-ani_iteration_count="1" class="qfy-element bitImageControlDiv ">
+                                        <style>
+                                            @@media only screen and (max-width: 768px) {
+                                                .single_image_text-652be7fe455a9792 .head {
+                                                    font-size: 16px !important;
+                                                }
+
+                                                .single_image_text-652be7fe455a9792 .content {
+                                                    font-size: 16px !important;
+                                                }
+                                            }
+                                        </style>
+                                        <a class="bitImageAhover   inlineblock " thumbpath="" href="http://w-51969-38056-92975.10615179203.sites.cnfree07.qifeiye.com/?page_id=6432">
+                                            <div class="bitImageParentDiv qfe_single_image qfe_content_element vc_align_right">
+                                                <div class="qfe_wrapper"><span></span><span class="single_two_images " style="display:inline-block;max-width:100%;font-size:0;position:relative;"><img class="front_image   ag_image" src="./简介博客模板_files/aHR0cHM6Ly81ZGJmOTY4MDU0YzE3LnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMTAvNmU1Mzk0MjBiNDQ2ZTRhOTI0NmEzZGVmYTM4OGI5MmEtMjV4MjUtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" alt="搜索" description="" data-attach-id="12679" data-title="搜索" title="" src-img="" style=""><img class=" scenery_image   ag_image" src="./简介博客模板_files/aHR0cHM6Ly81ZGJmOTY4MDU0YzE3LnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMTAvOGZlMDQxYmJhZjkwOTcwNWE4ZTE5YWM2Mzc3YjcwMTUtMjV4MjUtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" alt="搜索(1)" description="" data-attach-id="12678" data-title="搜索(1)" title="" src-img="" style="position:absolute;left:0;top:0;opacity: 0;"><i></i></span></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <a class="bitImageAhover   inlineblock " thumbpath="" href="http://w-51969-38056-92975.10615179203.sites.cnfree07.qifeiye.com/?page_id=6432"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- #branding -->
+            </div><!-- .wf-wrap -->
+        </header><!-- #masthead -->
+
+        <section class="bitBanner" id="bitBanner" bitdatamarker="bitBanner" bitdataaction="site_fix_container"></section>
+        <div id="main" class="bit_main_content">
+            <div class="main-gradient"></div>
+            <div class="wf-wrap">
+                <div class="wf-container-main">
+                    <div id="content" class="content" role="main">
+                        @RenderBody()
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div><!-- .wf-container -->
+            </div><!-- .wf-wrap -->
+        </div><!-- #main -->
+
+        <footer id="footer" class="footer">
+            <div class="wf-wrap">
+                <div class="wf-container qfe_row footer1" bitdataaction="site_widget_container" bitdatamarker="sidebar_2">
+                    <section id="simplepage-3" style="margin-top:0;margin-bottom:0;" class="widget simplepage site_tooler">
+                        <style class="style_simplepage-3">
+                            #simplepage-3 .widget-title {
+                                padding: 0 0 0 10px;
+                                height: 28px;
+                                line-height: 28px;
+                                background-color: transparent;
+                                margin: 0px;
+                                font-family:;
+                                font-size: px;
+                                font-weight: normal;
+                                font-style: normal;
+                                text-decoration: none;
+                                color: #ffffff;
+                                border-top: 1px solid transparent;
+                                border-left: 1px solid transparent;
+                                border-right: 1px solid transparent;
+                                border-bottom: 0px solid transparent;
+                                background-image: none;
+                                -webkit-border-top-left-radius: 4px;
+                                -webkit-border-top-right-radius: 4px;
+                                -moz-border-radius-topleft: 4px;
+                                -moz-border-radius-topright: 4px;
+                                border-top-left-radius: 4px;
+                                border-top-right-radius: 4px;
+                            }
+
+                            #simplepage-3 .widget-title {
+                                border-top: 0;
+                                border-left: 0;
+                                border-right: 0;
+                            }
+
+                            #simplepage-3 .bitWidgetFrame {
+                                border-bottom: 0;
+                                border-top: 0;
+                                border-left: 0;
+                                border-right: 0;
+                                padding: 4px 10px 4px 10px;
+                            }
+
+                            #simplepage-3 {
+                                -webkit-box-shadow: none;
+                                box-shadow: none;
+                            }
+
+                                #simplepage-3 .bitWidgetFrame {
+                                    background-color: transparent;
+                                    background-image: none;
+                                    -webkit-border-bottom-left-radius: 4px;
+                                    border-bottom-left-radius: 4px;
+                                    -webkit-border-bottom-right-radius: 4px;
+                                    border-bottom-right-radius: 4px;
+                                }
+
+                                #simplepage-3 .bitWidgetFrame {
+                                    padding-left: 0px;
+                                    padding-right: 0px;
+                                }
+
+                            body #simplepage-3 .bitWidgetFrame {
+                                padding-top: 0px !important;
+                                padding-bottom: 0px !important;
+                            }
+                        </style>
+                        <div class="simplepage_container bitWidgetFrame" data-post_id="11082">
+                            <section data-fixheight="" class="qfy-row-11-652be7feac2fe894706 section     no  section-text-no-shadow section-inner-no-shadow section-normal section-orgi" id="bit_yobg3" style="margin-bottom:0;border-radius:0px;color:#999999;">
+                                <style class="row_class qfy_style_class">
+                                    @@media only screen and (min-width: 992px) {
+                                        section.section.qfy-row-11-652be7feac2fe894706 {
+                                            padding-left: 0;
+                                            padding-right: 0;
+                                            padding-top: 50px;
+                                            padding-bottom: 50px;
+                                            margin-top: 0;
+                                            margin-bottom: 0;
+                                        }
+
+                                            section.section.qfy-row-11-652be7feac2fe894706 > .container {
+                                                max-width: 1160px;
+                                                margin: 0 auto;
+                                            }
+                                    }
+
+                                    @@media only screen and (max-width: 992px) {
+                                        .bit-html section.section.qfy-row-11-652be7feac2fe894706 {
+                                            padding-left: 15px;
+                                            padding-right: 15px;
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;
+                                            margin-top: 0;
+                                            margin-bottom: !important;
+                                            min-height: 0;
+                                        }
+                                    }
+                                </style>
+                                <div class="section-background-overlay background-overlay grid-overlay-0 " style="background-color: #fafafa;"></div>
+                                <div class="container">
+                                    <div class="row qfe_row">
+                                        <div data-animaleinbegin="90%" data-animalename="qfyfadeInUp" data-duration="" data-delay="" class=" qfy-column-17-652be7feacb4e310731 qfy-column-inner  vc_span12  text-default small-screen-undefined fullrow" data-dw="1/1" data-fixheight="">
+                                            <div style=";position:relative;" class="column_inner ">
+                                                <div class=" background-overlay grid-overlay-" style="background-color: transparent;width:100%;"></div>
+                                                <div class="column_containter" style="z-index:3;position:relative;">
+                                                    <div id="vc_header_652be7feae615736" m-padding="0px 0px 6px 0px" p-padding="0 0 6px 0" css_animation_delay="0" qfyuuid="qfy_header_5qci5-c-tk" data-anitime="0.7" data-ani_iteration_count="1" class="qfy-element minheigh1px qfe_text_column qfe_content_element " style="position: relative;;;background-repeat: no-repeat;;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:6px;padding-right:0;padding-left:0;">
+                                                        <style>
+                                                            @@media only screen and (max-width: 768px) {
+                                                                #vc_header_652be7feae615736 .header_title {
+                                                                    font-size: 34px !important;
+                                                                }
+                                                            }
+
+                                                            @@media only screen and (max-width: 768px) {
+                                                                #vc_header_652be7feae615736 .header_subtitle {
+                                                                    font-size: 12px !important;
+                                                                }
+                                                            }
+                                                        </style>
+                                                        <div class="qfe_wrapper">
+                                                            <div class="qfy_title center mobilecenter">
+                                                                <div class="qfy_title_image_warpper" style="display:inline-block;position:relative;max-width:100%;">
+                                                                    <div class="qfy_title_inner" style="display:inline-block;position:relative;max-width:100%;">
+                                                                        <div class="header_title" style="font-family:arial;font-size:26px;font-weight:normal;font-style:normal;color:#333333;display:block;vertical-align:bottom;">BLOG</div>
+                                                                        <div class="header_subtitle" style="font-family:century gothic;font-size:13px;font-weight:normal;font-style:normal;color:#bababa;display:block;vertical-align:bottom;"></div>
+                                                                    </div>
+                                                                    <style></style>
+                                                                    <div class="button_wrapper" style="display:none;">
+                                                                        <div class="button " style="display:inline-block;max-width:100%;text-align:center; font-size:14px; color:#333; padding:5px;">+ 查看更多</div>
+                                                                    </div>
+                                                                    <span style="clear:both;"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div m-padding="0px 0px 0px 0px" p-padding="0 0 0 0" css_animation_delay="0" qfyuuid="qfy_column_text_w437s-c-mb" data-anitime="0.7" data-ani_iteration_count="1" class="qfy-element qfy-text qfy-text-59011 qfe_text_column qfe_content_element  mobile_fontsize " style="position: relative;;;line-height:1.5em;;background-position:left top;background-repeat: no-repeat;;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-radius:0px;">
+                                                        <div class="qfe_wrapper ">
+                                                            <div style="text-align: center;"><span style="font-size: 12px;">© 2020 Blog 版权所有 网站备案号: 京IPC备000000000-1号</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div m-padding="0px 0px 0px 0px" p-padding="0 0 0 0" css_animation_delay="0" qfyuuid="qfy_column_text_6hxq1" data-anitime="0.7" data-ani_iteration_count="1" class="qfy-element qfy-text qfy-text-97997 qfe_text_column qfe_content_element  " style="position: relative;;;line-height:1.5em;;background-position:left top;background-repeat: no-repeat;;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-radius:0px;">
+                                                        <div class="qfe_wrapper ">
+                                                            <div style="text-align: center;"><span style="font-size: 12px;">服务条款 &nbsp; 隐私政策 &nbsp; 法律申明<br></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="icons_list-652be7feaf5035001" style="padding-top:11px;padding-bottom:0;padding-right:0;padding-left:0;" m-padding="11px 0px 0px 0px" p-padding="11px 0 0 0" css_animation_delay="0" qfyuuid="qfy_socail_icons_list_n466s" class="qfy-icons_list  qfy-element ">
+                                                        <ul class="gallery_icons_list " style="text-align:center;">
+                                                            <li style="display:inline-block;">
+                                                                <span data-desc="" data-tj="1" data-ta="2" data-width="150" data-bg="" data-image="" style="margin-left:5px;margin-right:5px;margin-bottom:px" class="black2 qfy-icon qfy-icon_16x16 qq-icon_16x16" title=""></span>
+                                                            </li>
+                                                            <li style="display:inline-block;">
+                                                                <span data-desc="" data-tj="1" data-ta="2" data-width="150" data-bg="" data-image="" style="margin-left:5px;margin-right:5px;margin-bottom:px" class="black2 qfy-icon qfy-icon_16x16 weixin-icon_16x16" title=""></span>
+                                                            </li>
+                                                            <li style="display:inline-block;">
+                                                                <span data-desc="" data-tj="1" data-ta="2" data-width="150" data-bg="" data-image="" style="margin-left:5px;margin-right:5px;margin-bottom:px" class="black2 qfy-icon qfy-icon_16x16 weibo-icon_16x16" title=""></span>
+                                                            </li>
+                                                            <li style="display:inline-block;">
+                                                                <span data-desc="" data-tj="1" data-ta="2" data-width="150" data-bg="" data-image="" style="margin-left:5px;margin-right:5px;margin-bottom:px" class="black2 qfy-icon qfy-icon_16x16 facebook-icon_16x16" title=""></span>
+                                                            </li>
+                                                            <li style="display:inline-block;">
+                                                                <span data-desc="" data-tj="1" data-ta="2" data-width="150" data-bg="" data-image="" style="margin-left:5px;margin-right:5px;margin-bottom:px" class="black2 qfy-icon qfy-icon_16x16 linkedin-icon_16x16" title=""></span>
+                                                            </li>
+                                                            <li style="display:inline-block;">
+                                                                <span data-desc="" data-tj="1" data-ta="2" data-width="150" data-bg="" data-image="" style="margin-left:5px;margin-right:5px;margin-bottom:px" class="black2 qfy-icon qfy-icon_16x16 fr-icon_16x16" title=""></span>
+                                                            </li>
+                                                            <li style="clear:both;"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <style class="column_class qfy_style_class">
+                                            .qfy-column-17-652be7feacb4e310731 > .column_inner {
+                                                padding-left: 0;
+                                                padding-right: 0;
+                                                padding-top: 0;
+                                                padding-bottom: 0;
+                                            }
+
+                                            @@media only screen and (min-width: 992px) {
+                                                .qfe_row .vc_span_class.qfy-column-17-652be7feacb4e310731 {
+                                                }
+                                            }
+
+                                            @@media only screen and (max-width: 992px) {
+                                                .qfy-column-17-652be7feacb4e310731 > .column_inner {
+                                                    margin: 0 auto 0 !important;
+                                                    padding-left: 0;
+                                                    padding-right: 0;
+                                                    padding-top:;
+                                                    padding-bottom:;
+                                                }
+
+                                                .display_entire .qfe_row .vc_span_class.qfy-column-17-652be7feacb4e310731 {
+                                                }
+
+                                                .qfy-column-17-652be7feacb4e310731 > .column_inner > .background-overlay, .qfy-column-17-652be7feacb4e310731 > .column_inner > .background-media {
+                                                    width: 100% !important;
+                                                    left: 0 !important;
+                                                    right: auto !important;
+                                                }
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div><!-- .wf-wrap -->
+            <!--  ************begin************* -->
+            <style type="text/css" id="static-stylesheet-footer">
+                #footer.footer .footer1 .widget {
+                    width: 99%;
+                }
+
+                    #footer.footer .footer1 .widget.simplepage {
+                        width: 100%;
+                    }
+
+                #footer.footer .footer2 .widget {
+                    width: 99%;
+                }
+
+                    #footer.footer .footer2 .widget.simplepage {
+                        width: 100%;
+                    }
+
+                #footer.footer .footer3 .widget {
+                    width: 99%;
+                }
+
+                    #footer.footer .footer3 .widget.simplepage {
+                        width: 100%;
+                    }
+
+                .bit_main_content {
+                    margin-top: 0px;
+                    margin-bottom: 0px
+                }
+
+                @@media screen and (min-width: 760px) {
+                    .bit_main_content {
+                        min-height: 100px;
+                    }
+                }
+
+                #footer .wf-wrap, .content-fullwidth.mini-boxed-layout #page #footer .wf-wrap .qfe_row {
+                    padding: 0;
+                }
+            </style>
+
+            <!--  ************end************* -->
+        </footer>
+        <a href="https://5dbf968054c17.t74.qifeiye.com/#" class="scroll-top "></a>
+    </div><!-- #page -->
 
     <script type="text/javascript">
-        jQuery(document).ready(function () {
-            Layout.init();
-            Layout.initOWL();
-            Layout.initTwitter();
-            Layout.initFixHeaderWithPreHeader(); /* Switch On Header Fixing (only if you have pre-header) */
-            Layout.initNavScrolling();
-            new WOW().init();
-        });
+        /* <![CDATA[ */
+        /* dt-plugins */
+        var dtLocal = { "passText": "To view this protected post, enter the password below:", "moreButtonAllLoadedText": "Everything is loaded", "postID": "11258", "ajaxurl": "https:\/\/5dbf968054c17.t74.qifeiye.com\/admin\/admin-ajax.php", "contactNonce": "530bf9f901", "ajaxNonce": "509a622121", "pageData": { "type": "page", "template": "page", "layout": null }, "themeSettings": { "smoothScroll": "on" } };
+        /* thickbox */
+        var thickboxL10n = { "next": "\u4e0b\u4e00\u5f20 >", "prev": "< \u4e0a\u4e00\u5f20", "image": "\u56fe\u7247", "of": "\/", "close": "\u5173\u95ed", "noiframes": "This feature requires inline frames. You have iframes disabled or your browser does not support them.", "loadingAnimation": "\/\/f.goodq.top\/FeiEditor\/bitSite\/images\/preloader.gif" };
+
+        /* ]]> */
     </script>
-    <!-- END CORE PLUGINS -->
-    <!-- BEGIN PAGE-SPECIFIC PLUGINS -->
-    <!-- END PAGE-SPECIFIC PLUGINS -->
-    <!-- BEGIN INTEGRATIONS -->
+    <script type="text/javascript" src="./blog/js/6e75eef2fc44bc2a57f66025548d55cb.js"></script>
+    @RenderSection("scripts")
+    <link rel="stylesheet" href="./blog/css/0fed1b829c0c21e4916c6f90380d51b3.css" type="text/css" media="all">
+    <style type="text/css">
 
-    <script type="text/javascript">
-        (function (w, d, t, u, n, s, e) {
-            w['SwiftypeObject'] = n; w[n] = w[n] || function () {
-                (w[n].q = w[n].q || []).push(arguments);
-            }; s = d.createElement(t);
-            e = d.getElementsByTagName(t)[0]; s.async = 1; s.src = u; e.parentNode.insertBefore(s, e);
-        })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
-
-        _st('install', 'mqSgSxnMMDR4bbs2NXuy', '2.0.0');
-    </script>
-
-
-
-    <script id="dsq-count-scr" src="//hexothemecorporate.disqus.com/count.js" async></script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-70830587-2', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-    <!-- End Google Analytics -->
-    <!-- END INTEGRATIONS -->
-
+    </style>
+    <div style="display:none;"></div>
+    <div id="phantom">
+        <div class="ph-wrap with-logo">
+            <div class="ph-wrap-content" style="max-width: 1280px;">
+                <div class="ph-wrap-inner">
+                    <div class="logo-box">
+                        <div style="height:48px;vertical-align: middle;display: table-cell;">
+                            <a href="https://5dbf968054c17.t74.qifeiye.com/">
+                                <img src="./简介博客模板_files/aHR0cHM6Ly81ZGJmOTY4MDU0YzE3LnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMTAvMjc2NjQ4MzdiZWMzOGJiYjQyZmFkZDBkYTRjMzQ1ZWQtOTAud2VicA_p_p100_p_3D_p_p100_p_3D.webp" height="200" width="200" style="max-height: 26px;">
+                            </a>
+                        </div>
+                        <section class="floatlogoText" style="vertical-align: middle;padding-left:8px;">
+                            <span style="color: rgb(68, 68, 68);">
+                                <span style="font-family: arial;">
+                                    <span style="font-size: 22px;">BLOG</span>
+                                </span>
+                            </span>
+                        </section>
+                    </div>
+                    <div class="menu-box"></div>
+                    <div class="menu-info-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 

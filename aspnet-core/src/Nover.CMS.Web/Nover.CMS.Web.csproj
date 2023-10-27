@@ -1,10 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <Import Project="..\..\common.props" />
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <RootNamespace>Nover.CMS.Web</RootNamespace>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,11 +48,8 @@
   <ItemGroup>
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="7.4.0" />
     <PackageReference Include="Volo.CmsKit.Web" Version="7.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="2.4.*-*" />
   </ItemGroup>
 
   <ItemGroup>
@@ -70,10 +66,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Home\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\img\uploads\brand\logo.svg" />
     <None Include="wwwroot\js\main.js" />
     <None Include="wwwroot\js\options.js" />
@@ -84,6 +76,10 @@
     <None Include="wwwroot\js\plugins\slick.min.js" />
     <None Include="wwwroot\js\vendor\jquery-1.12.4.min.js" />
     <None Include="wwwroot\js\vendor\modernizr-3.3.1.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\新文件夹\" />
   </ItemGroup>
 
 </Project>
