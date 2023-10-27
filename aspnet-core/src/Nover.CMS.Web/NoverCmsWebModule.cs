@@ -18,9 +18,6 @@ using Volo.Abp.AspNetCore.Mvc.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI;
 using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
@@ -43,6 +40,8 @@ using System;
 using System.Linq;
 using Microsoft.AspNetCore.Cors;
 using System.Reflection.Metadata;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 
 namespace Nover.CMS.Web;
 
@@ -52,9 +51,9 @@ namespace Nover.CMS.Web;
     typeof(NoverCmsEntityFrameworkCoreModule),
     typeof(AbpAutofacModule),
     typeof(AbpIdentityWebModule),
+    typeof(AbpAspNetCoreMvcUiBasicThemeModule),
     typeof(AbpSettingManagementWebModule),
     typeof(AbpAccountWebOpenIddictModule),
-    typeof(AbpAspNetCoreMvcUiLeptonXLiteThemeModule),
     typeof(AbpTenantManagementWebModule),
     typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpSwashbuckleModule)
@@ -85,7 +84,6 @@ public class NoverCmsWebModule : AbpModule
 
         PreConfigure<OpenIddictBuilder>(builder =>
           {
-
               builder.AddValidation(options =>
               {
                   options.AddAudiences("CMS");
@@ -102,11 +100,10 @@ public class NoverCmsWebModule : AbpModule
 
         //Configure<AbpThemingOptions>(options =>
         //{
-        //    options.Themes.Clear();
-        //    options.DefaultThemeName = null;            
+        //    options.DefaultThemeName = "";
         //});
 
-
+        ConfigureRazorPageRoute();
         ConfigureAuthentication(context);
         ConfigureUrls(configuration);
         ConfigureBundles();
@@ -116,6 +113,16 @@ public class NoverCmsWebModule : AbpModule
         ConfigureAutoApiControllers();
         ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context.Services);
+    }
+
+    private void ConfigureRazorPageRoute() 
+    {
+        Configure<RazorPagesOptions>(options =>
+        {
+            options.Conventions.AddPageRoute("/Home/Index", "/");
+            options.Conventions.AddPageRoute("/Resume/Index", "/Resume");
+        });
+
     }
 
     private void ConfigureAuthentication(ServiceConfigurationContext context)
@@ -136,12 +143,7 @@ public class NoverCmsWebModule : AbpModule
     {
         Configure<AbpBundlingOptions>(options =>
         {
-            options.StyleBundles.Configure(LeptonXLiteThemeBundles.Styles.Global,
-                bundle =>
-                {
-                    bundle.AddFiles("/global-styles.css");
-                }
-            );
+
         });
     }
 
