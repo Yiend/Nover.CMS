@@ -120,6 +120,7 @@ public class NoverCmsWebModule : AbpModule
         Configure<RazorPagesOptions>(options =>
         {
             options.Conventions.AddPageRoute("/Home/Index", "/");
+            options.Conventions.AddPageRoute("/Live/Index", "/live");
             options.Conventions.AddPageRoute("/Resume/Index", "/Resume");
         });
 
