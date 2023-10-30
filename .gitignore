@@ -2,6 +2,9 @@
 # not necessary for Craft 3 (https://github.com/craftcms/craft/issues/26)
 /craft/storage/*
 !/craft/storage/rebrand
+/react-web/node_modules
 /react-web/src/.umi
 /react-web/src/.umi/.cache
 /react-web/.git
+/react-web-admin/node_modules
+/react-web-admin/.git
