@@ -3,11 +3,11 @@ import {
   createIntl,
   IntlShape,
   MessageDescriptor,
-} from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/react-intl';
+} from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/node_modules/react-intl';
 import { ApplyPluginsType } from 'umi';
 import { event, LANG_CHANGE_EVENT } from './locale';
 // @ts-ignore
-import warning from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
+import warning from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/node_modules/@umijs/plugin-locale/node_modules/warning/warning.js';
 
 import { plugin } from '../core/plugin';
 
@@ -34,16 +34,16 @@ export {
   defineMessages,
   injectIntl,
   useIntl,
-} from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/react-intl';
+} from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/node_modules/react-intl';
 
 let g_intl: IntlShape;
 
 const useLocalStorage = true;
 
 import enUS0 from 'antd/es/locale/en_US';
-import lang_enUS0 from "D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/locales/en-US.ts";
+import lang_enUS0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/locales/en-US.ts";
 import zhCN0 from 'antd/es/locale/zh_CN';
-import lang_zhCN0 from "D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/locales/zh-CN.ts";
+import lang_zhCN0 from "D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/locales/zh-CN.ts";
 
 export const localeInfo: {[key: string]: any} = {
   'en-US': {

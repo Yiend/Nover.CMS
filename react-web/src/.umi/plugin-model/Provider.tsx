@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import initialState from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/.umi/plugin-initial-state/models/initialState';
+import initialState from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/.umi/plugin-initial-state/models/initialState';
 
 // @ts-ignore
 import Dispatcher from './helpers/dispatcher';

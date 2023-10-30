@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType, dynamic } from 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/umi/node_modules/@umijs/runtime';
+import { ApplyPluginsType, dynamic } from 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/node_modules/umi/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 import LoadingComponent from '@ant-design/pro-layout/es/PageLoading';
@@ -9,7 +9,7 @@ export function getRoutes() {
   const routes = [
   {
     "path": "/",
-    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/.umi/plugin-layout/Layout.tsx'), loading: LoadingComponent}),
+    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/.umi/plugin-layout/Layout.tsx'), loading: LoadingComponent}),
     "routes": [
       {
         "path": "/~demos/:uuid",
@@ -18,7 +18,7 @@ export function getRoutes() {
         "component": ((props) => dynamic({
           loader: async () => {
             const React = await import('react');
-            const { default: getDemoRenderArgs } = await import(/* webpackChunkName: 'dumi_demos' */ 'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
+            const { default: getDemoRenderArgs } = await import(/* webpackChunkName: 'dumi_demos' */ 'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/node_modules/@umijs/preset-dumi/lib/plugins/features/demo/getDemoRenderArgs');
             const { default: Previewer } = await import(/* webpackChunkName: 'dumi_demos' */ 'dumi-theme-default/es/builtins/Previewer.js');
             const { usePrefersColor, context } = await import(/* webpackChunkName: 'dumi_demos' */ 'dumi/theme');
 
@@ -65,15 +65,15 @@ export function getRoutes() {
         "__dumiRoot": true,
         "layout": false,
         "path": "/~docs",
-        "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'../dumi/layout'), loading: LoadingComponent}), dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/node_modules/dumi-theme-default/es/layout.js'), loading: LoadingComponent})],
+        "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'../dumi/layout'), loading: LoadingComponent}), dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/node_modules/dumi-theme-default/es/layout.js'), loading: LoadingComponent})],
         "routes": [
           {
             "path": "/~docs/components",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'components__index.md' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/components/index.md'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'components__index.md' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/components/index.md'), loading: LoadingComponent}),
             "exact": true,
             "meta": {
               "filePath": "src/components/index.md",
-              "updatedTime": 1697632502000,
+              "updatedTime": 1698056140195,
               "title": "业务组件",
               "sidemenu": false,
               "slugs": [
@@ -148,7 +148,7 @@ export function getRoutes() {
             "path": "/user/login",
             "layout": false,
             "name": "login",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__Login' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/user/Login'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__Login' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/user/Login'), loading: LoadingComponent}),
             "exact": true
           },
           {
@@ -157,7 +157,7 @@ export function getRoutes() {
             "exact": true
           },
           {
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/404'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/404'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -176,21 +176,21 @@ export function getRoutes() {
             "name": "analysis",
             "icon": "smile",
             "path": "/dashboard/analysis",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__dashboard__analysis' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/dashboard/analysis'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__dashboard__analysis' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/dashboard/analysis'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "monitor",
             "icon": "smile",
             "path": "/dashboard/monitor",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__dashboard__monitor' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/dashboard/monitor'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__dashboard__monitor' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/dashboard/monitor'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "workplace",
             "icon": "smile",
             "path": "/dashboard/workplace",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__dashboard__workplace' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/dashboard/workplace'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__dashboard__workplace' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/dashboard/workplace'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -209,21 +209,21 @@ export function getRoutes() {
             "name": "basic-form",
             "icon": "smile",
             "path": "/form/basic-form",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__form__basic-form' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/form/basic-form'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__form__basic-form' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/form/basic-form'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "step-form",
             "icon": "smile",
             "path": "/form/step-form",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__form__step-form' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/form/step-form'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__form__step-form' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/form/step-form'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "advanced-form",
             "icon": "smile",
             "path": "/form/advanced-form",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__form__advanced-form' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/form/advanced-form'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__form__advanced-form' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/form/advanced-form'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -236,7 +236,7 @@ export function getRoutes() {
           {
             "path": "/list/search",
             "name": "search-list",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search'), loading: LoadingComponent}),
             "routes": [
               {
                 "path": "/list/search",
@@ -247,21 +247,21 @@ export function getRoutes() {
                 "name": "articles",
                 "icon": "smile",
                 "path": "/list/search/articles",
-                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search__articles' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search/articles'), loading: LoadingComponent}),
+                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search__articles' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search/articles'), loading: LoadingComponent}),
                 "exact": true
               },
               {
                 "name": "projects",
                 "icon": "smile",
                 "path": "/list/search/projects",
-                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search__projects' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search/projects'), loading: LoadingComponent}),
+                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search__projects' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search/projects'), loading: LoadingComponent}),
                 "exact": true
               },
               {
                 "name": "applications",
                 "icon": "smile",
                 "path": "/list/search/applications",
-                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search__applications' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search/applications'), loading: LoadingComponent}),
+                "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__search__applications' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/search/applications'), loading: LoadingComponent}),
                 "exact": true
               }
             ]
@@ -275,21 +275,21 @@ export function getRoutes() {
             "name": "table-list",
             "icon": "smile",
             "path": "/list/table-list",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__table-list' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/table-list'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__table-list' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/table-list'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "basic-list",
             "icon": "smile",
             "path": "/list/basic-list",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__basic-list' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/basic-list'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__basic-list' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/basic-list'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "card-list",
             "icon": "smile",
             "path": "/list/card-list",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__card-list' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/card-list'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__list__card-list' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/list/card-list'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -308,14 +308,14 @@ export function getRoutes() {
             "name": "basic",
             "icon": "smile",
             "path": "/profile/basic",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__profile__basic' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/profile/basic'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__profile__basic' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/profile/basic'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "advanced",
             "icon": "smile",
             "path": "/profile/advanced",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__profile__advanced' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/profile/advanced'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__profile__advanced' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/profile/advanced'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -334,14 +334,14 @@ export function getRoutes() {
             "name": "success",
             "icon": "smile",
             "path": "/result/success",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__result__success' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/result/success'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__result__success' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/result/success'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "fail",
             "icon": "smile",
             "path": "/result/fail",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__result__fail' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/result/fail'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__result__fail' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/result/fail'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -360,21 +360,21 @@ export function getRoutes() {
             "name": "403",
             "icon": "smile",
             "path": "/exception/403",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__exception__403' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/exception/403'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__exception__403' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/exception/403'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "404",
             "icon": "smile",
             "path": "/exception/404",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__exception__404' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/exception/404'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__exception__404' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/exception/404'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "500",
             "icon": "smile",
             "path": "/exception/500",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__exception__500' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/exception/500'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__exception__500' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/exception/500'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -393,14 +393,14 @@ export function getRoutes() {
             "name": "center",
             "icon": "smile",
             "path": "/account/center",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__account__center' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/account/center'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__account__center' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/account/center'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "settings",
             "icon": "smile",
             "path": "/account/settings",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__account__settings' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/account/settings'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__account__settings' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/account/settings'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -419,21 +419,21 @@ export function getRoutes() {
             "name": "flow",
             "icon": "smile",
             "path": "/editor/flow",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__editor__flow' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/editor/flow'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__editor__flow' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/editor/flow'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "mind",
             "icon": "smile",
             "path": "/editor/mind",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__editor__mind' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/editor/mind'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__editor__mind' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/editor/mind'), loading: LoadingComponent}),
             "exact": true
           },
           {
             "name": "koni",
             "icon": "smile",
             "path": "/editor/koni",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__editor__koni' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/editor/koni'), loading: LoadingComponent}),
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__editor__koni' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/editor/koni'), loading: LoadingComponent}),
             "exact": true
           }
         ]
@@ -449,7 +449,7 @@ export function getRoutes() {
         "exact": true
       },
       {
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'D:/MyCode/NoverSolutions/Nover.CMS/react-web/src/pages/404'), loading: LoadingComponent}),
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__404' */'D:/GitHubCode/NoverSolutions/Nover.CMS/react-web/src/pages/404'), loading: LoadingComponent}),
         "exact": true
       }
     ]
