@@ -1,5 +1,4 @@
 import { USER } from "@/api/interface/index";
-import { PORT1 } from "@/api/config/servicePort";
 import qs from "qs";
 
 import http from "@/api";
@@ -37,6 +36,11 @@ export const loginApi = (params: USER.ReqLoginForm) => {
 };
 
 /**
+ * @name 用户登出
+ */
+export const logout = () => http.get("/api/account/logout");
+
+/**
  * @name 获取用户信息
  * @param
  * @method GET
@@ -59,10 +63,10 @@ export const changePassword = (body: USER.ChangePasswordParams) => http.post("/a
 
 // * 获取按钮权限
 export const getAuthorButtons = () => {
-	return http.get<USER.ResAuthButtons>(PORT1 + `/auth/buttons`);
+	return http.get<USER.ResAuthButtons>(`/auth/buttons`);
 };
 
 // * 获取菜单列表
 export const getMenuList = () => {
-	return http.get<Menu.MenuOptions[]>(PORT1 + `/menu/list`);
+	return http.get<Menu.MenuOptions[]>(`/menu/list`);
 };
