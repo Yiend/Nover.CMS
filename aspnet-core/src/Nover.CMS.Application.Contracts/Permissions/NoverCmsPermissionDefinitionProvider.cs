@@ -13,7 +13,7 @@ public class NoverCmsPermissionDefinitionProvider : PermissionDefinitionProvider
 {
     public override void Define(IPermissionDefinitionContext context)
     {
-        var myGroup = context.AddGroup(NoverCmsPermissions.GroupName);
+       // var myGroup = context.AddGroup(NoverCmsPermissions.GroupName);
         //Define your own permissions here. Example:
         //myGroup.AddPermission(CMSPermissions.MyPermission1, L("Permission:MyPermission1"));
 
@@ -41,6 +41,13 @@ public class NoverCmsPermissionDefinitionProvider : PermissionDefinitionProvider
         var auditLogGroup = context.AddGroup(NoverCmsAuditLogPermissions.GroupName);
         var aduditLogPermission = auditLogGroup.AddPermission(NoverCmsAuditLogPermissions.AuditLogs.Default, AuditLoggingL("Permission:AuditLogManagement"));
         aduditLogPermission.AddChild(NoverCmsAuditLogPermissions.AuditLogs.Delete, AuditLoggingL("Permission:Delete"));
+
+
+        var myGroup = context.AddGroup(NoverCmsPermissions.GroupName, L("Permission:DynamicMenu"));
+        var menuItemPermission = myGroup.AddPermission(NoverCmsPermissions.MenuItem.Default, L("Permission:MenuItem"));
+        menuItemPermission.AddChild(NoverCmsPermissions.MenuItem.Create, L("Permission:Create"));
+        menuItemPermission.AddChild(NoverCmsPermissions.MenuItem.Update, L("Permission:Update"));
+        menuItemPermission.AddChild(NoverCmsPermissions.MenuItem.Delete, L("Permission:Delete"));
     }
 
     private static LocalizableString L(string name)

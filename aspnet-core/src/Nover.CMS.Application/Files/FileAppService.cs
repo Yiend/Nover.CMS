@@ -13,7 +13,7 @@ using Volo.Abp;
 using Volo.Abp.Settings;
 using Volo.Abp.Validation;
 
-namespace Nover.CMS.Application.Files
+namespace Nover.CMS.Application
 {
     public class FileAppService : NoverCmsAppService, IFileAppService
     {
