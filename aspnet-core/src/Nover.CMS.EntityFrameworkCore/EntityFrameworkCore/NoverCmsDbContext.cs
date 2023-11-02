@@ -15,6 +15,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Volo.CmsKit;
 using Volo.CmsKit.EntityFrameworkCore;
+using Nover.CMS.Domain;
 
 namespace Nover.CMS.EntityFrameworkCore;
 
@@ -53,6 +54,8 @@ public class NoverCmsDbContext :
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
+
+    public DbSet<MenuItem> MenuItems { get; set; }
 
     #endregion
 
