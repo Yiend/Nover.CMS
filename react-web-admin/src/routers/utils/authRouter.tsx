@@ -21,6 +21,7 @@ const AuthRouter = (props: { children: JSX.Element }) => {
 
 	// * 判断是否有Token
 	const token = store.getState().global.token;
+	console.log("判断是否有Token", token);
 	if (!token) return <Navigate to="/login" replace />;
 
 	// * Dynamic Router(动态路由，根据后端返回的菜单数据生成的一维数组)
