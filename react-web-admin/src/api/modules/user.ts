@@ -24,9 +24,7 @@ const clientSetting = {
 export const loginApi = (params: USER.ReqLoginForm) => {
 	clientSetting.username = params.username.trim();
 	clientSetting.password = params.password;
-
-	console.log("登录参数：", clientSetting);
-	return http.post<USER.ResLogin>("/connect/token", qs.stringify(params));
+	return http.post<USER.ResLogin>("/connect/token", qs.stringify(clientSetting));
 	/*
 	return http.post<Login.ResLogin>(PORT1 + `/login`, params);
 	return http.post<Login.ResLogin>(PORT1 + `/login`, {}, { params }); // post 请求携带 query 参数  ==>  ?username=admin&password=123456

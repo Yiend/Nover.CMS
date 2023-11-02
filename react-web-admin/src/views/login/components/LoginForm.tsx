@@ -23,8 +23,8 @@ const LoginForm = (props: any) => {
 		try {
 			setLoading(true);
 			//loginForm.password = md5(loginForm.password);
-			const { data } = await loginApi(loginForm);
-			setToken(data?.access_token);
+			const data = await loginApi(loginForm);
+			setToken(data.access_token);
 			setTabsList([]);
 			message.success("登录成功！");
 			navigate(HOME_URL);
