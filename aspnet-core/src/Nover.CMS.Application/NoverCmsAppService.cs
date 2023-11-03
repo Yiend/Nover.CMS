@@ -13,5 +13,6 @@ public abstract class NoverCmsAppService : ApplicationService
     protected NoverCmsAppService()
     {
         LocalizationResource = typeof(CMSResource);
+        ObjectMapperContext = typeof(NoverCmsApplicationModule);
     }
 }
