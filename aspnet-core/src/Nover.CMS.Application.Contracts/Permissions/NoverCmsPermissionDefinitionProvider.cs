@@ -13,7 +13,7 @@ public class NoverCmsPermissionDefinitionProvider : PermissionDefinitionProvider
 {
     public override void Define(IPermissionDefinitionContext context)
     {
-       // var myGroup = context.AddGroup(NoverCmsPermissions.GroupName);
+        var myGroup = context.AddGroup(NoverCmsPermissions.GroupName);
         //Define your own permissions here. Example:
         //myGroup.AddPermission(CMSPermissions.MyPermission1, L("Permission:MyPermission1"));
 
@@ -43,11 +43,21 @@ public class NoverCmsPermissionDefinitionProvider : PermissionDefinitionProvider
         aduditLogPermission.AddChild(NoverCmsAuditLogPermissions.AuditLogs.Delete, AuditLoggingL("Permission:Delete"));
 
 
-        var myGroup = context.AddGroup(NoverCmsPermissions.GroupName, L("Permission:DynamicMenu"));
-        var menuItemPermission = myGroup.AddPermission(NoverCmsPermissions.MenuItem.Default, L("Permission:MenuItem"));
+        var dynamicMenuGroup= context.AddGroup(NoverCmsPermissions.DynamicMenuGroupName, L("Permission:DynamicMenu"));
+        var menuItemPermission = dynamicMenuGroup.AddPermission(NoverCmsPermissions.MenuItem.Default, L("Permission:MenuItem"));
         menuItemPermission.AddChild(NoverCmsPermissions.MenuItem.Create, L("Permission:Create"));
         menuItemPermission.AddChild(NoverCmsPermissions.MenuItem.Update, L("Permission:Update"));
         menuItemPermission.AddChild(NoverCmsPermissions.MenuItem.Delete, L("Permission:Delete"));
+
+
+        var openIddictGroup = context.AddGroup(NoverCmsPermissions.OpenIddictGroupName);
+
+        // 添加openiddictApplication权限策略
+        var openiddictApplication = openIddictGroup.AddPermission(NoverCmsPermissions.OpenIddictApplication.Default, L(NoverCmsPermissions.OpenIddictApplication.Default));
+
+        // 添加openiddictApplication子权限策略
+        openiddictApplication.AddChild(NoverCmsPermissions.OpenIddictApplication.List, L(NoverCmsPermissions.OpenIddictApplication.List));
+        openiddictApplication.AddChild(NoverCmsPermissions.OpenIddictApplication.Update, L(NoverCmsPermissions.OpenIddictApplication.Update));
     }
 
     private static LocalizableString L(string name)

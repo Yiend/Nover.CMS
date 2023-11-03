@@ -33,6 +33,8 @@
     "MenuItemDeletionConfirmationMessage": "确认删除菜单项 {0}?",
     "SuccessfullyDeleted": "删除成功",
     "DynamicMenu:NonexistentParentMenuItem": "不存在的父级菜单项：{ParentName}",
-    "DynamicMenu:ExceededMenuLevelLimit": "菜单项最大支持 {MaxLevel} 级"
+    "DynamicMenu:ExceededMenuLevelLimit": "菜单项最大支持 {MaxLevel} 级",
+    "OpenIddict:DataNotFound": "数据未找到！",
+    "OpenIddict:AccountDuplication": "账号或邮箱重复！"
   }
 }

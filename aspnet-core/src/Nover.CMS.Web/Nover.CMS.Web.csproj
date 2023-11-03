@@ -16,9 +16,13 @@
 
   <ItemGroup>
     <Compile Remove="Logs\**" />
+    <Compile Remove="wwwroot\新文件夹\**" />
     <Content Remove="Logs\**" />
+    <Content Remove="wwwroot\新文件夹\**" />
     <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="wwwroot\新文件夹\**" />
     <None Remove="Logs\**" />
+    <None Remove="wwwroot\新文件夹\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -76,10 +80,6 @@
     <None Include="wwwroot\js\plugins\slick.min.js" />
     <None Include="wwwroot\js\vendor\jquery-1.12.4.min.js" />
     <None Include="wwwroot\js\vendor\modernizr-3.3.1.min.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\新文件夹\" />
   </ItemGroup>
 
 </Project>

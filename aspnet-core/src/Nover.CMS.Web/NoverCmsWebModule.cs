@@ -63,7 +63,7 @@ public class NoverCmsWebModule : AbpModule
 {
 	public override void PreConfigureServices(ServiceConfigurationContext context)
 	{
-		context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
+		PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
 		{
 			options.AddAssemblyResource(
 				typeof(CMSResource),
@@ -241,7 +241,8 @@ public class NoverCmsWebModule : AbpModule
 
 		app.UseCorrelationId();
 		app.UseStaticFiles();
-		app.UseRouting();
+        app.UseCors();
+        app.UseRouting();
 		app.UseAuthentication();
 		app.UseAbpOpenIddictValidation();
 
@@ -259,12 +260,6 @@ public class NoverCmsWebModule : AbpModule
 		});
 		app.UseAuditing();
 		app.UseAbpSerilogEnrichers();
-		app.UseConfiguredEndpoints(endpoints =>
-		{
-			endpoints.MapControllerRoute(
-			name: "default",
-			pattern: "{controller=Home}/{action=Index}/{id?}");
-
-		});
+		app.UseConfiguredEndpoints();
 	}
 }
