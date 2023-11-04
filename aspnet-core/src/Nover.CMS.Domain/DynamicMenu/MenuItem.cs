@@ -1,17 +1,17 @@
 using Nover.CMS.Domain.Shared;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities;
 
 namespace Nover.CMS.Domain
 {
-    public class MenuItem : AggregateRoot, IMenuItem
+    public class MenuItem : AggregateRoot<Guid>, IMenuItem
     {
         /// <summary>
         /// Name of the parent menu item.
         /// </summary>
-        public virtual string ParentName { get; protected set; }
+        public virtual Guid ParentId { get; protected set; }
 
         /// <summary>
         /// It will be a child of the Administration menu item if true.
@@ -22,7 +22,6 @@ namespace Nover.CMS.Domain
         /// <summary>
         /// Unique name of the menu in the application.
         /// </summary>
-        [Key]
         public virtual string Name { get; protected set; }
 
         /// <summary>
@@ -80,13 +79,10 @@ namespace Nover.CMS.Domain
 
         public virtual string LResourceTypeAssemblyName { get; protected set; }
 
-        [ForeignKey(nameof(ParentName))]
+
+        [ForeignKey(nameof(ParentId))]
         public virtual List<MenuItem> MenuItems { get; protected set; }
 
-        public override object[] GetKeys()
-        {
-            return new object[] { Name };
-        }
 
         protected MenuItem()
         {
@@ -94,7 +90,8 @@ namespace Nover.CMS.Domain
         }
 
         public MenuItem(
-            string parentName,
+            Guid id,
+            Guid parentId,
             bool inAdministration,
             string name,
             string displayName,
@@ -110,9 +107,9 @@ namespace Nover.CMS.Domain
             string lResourceTypeName,
             string lResourceTypeAssemblyName,
             List<MenuItem> menuItems
-        )
+        ) : base(id)
         {
-            ParentName = parentName;
+            ParentId = parentId;
             InAdministration = inAdministration;
             Name = name;
             DisplayName = displayName;

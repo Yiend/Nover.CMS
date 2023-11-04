@@ -1,18 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using JetBrains.Annotations;
 
 namespace Nover.CMS.Domain.Shared
 {
     public interface IMenuItem
     {
-        [CanBeNull]
-        string ParentName { get; }
-
-        [Key]
         [NotNull]
+        Guid ParentId { get; }
+
         string Name { get; }
         
-        [NotNull]
         string DisplayName { get; }
         
         [CanBeNull]

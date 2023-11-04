@@ -43,11 +43,11 @@ namespace Nover.CMS.EntityFrameworkCore;
     {
         context.Services.AddAbpDbContext<NoverCmsDbContext>(options =>
         {
-                /* Remove "includeAllEntities: true" to create
-                 * default repositories only for aggregate roots */
-            options.AddDefaultRepositories(includeAllEntities: true);
+            /* Remove "includeAllEntities: true" to create
+             * default repositories only for aggregate roots */
 
-            options.AddRepository<MenuItem, IMenuItemRepository>();
+            options.AddRepository<MenuItem, MenuItemRepository>();
+            options.AddDefaultRepositories(includeAllEntities: true);           
         });
 
         Configure<AbpDbContextOptions>(options =>

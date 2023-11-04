@@ -29,7 +29,7 @@ namespace Nover.CMS.Application
 
         protected override async Task<IQueryable<MenuItem>> CreateFilteredQueryAsync(GetMenuItemListInput input)
         {
-            return (await _repository.WithDetailsAsync()).Where(x => x.ParentName == input.ParentName);
+            return (await _repository.WithDetailsAsync()).Where(x => x.ParentId == input.ParentId);
         }
 
         protected override Task DeleteByIdAsync(MenuItemKey id)
@@ -121,11 +121,11 @@ namespace Nover.CMS.Application
             }
 
             // Maximum menu item level: 3
-            if (!parent.ParentName.IsNullOrEmpty())
+            if (parent.ParentId != Guid.Empty)
             {
-                var grandparent = await _repository.GetAsync(x => x.Name == parent.ParentName);
+                var grandparent = await _repository.GetAsync(x => x.Id == parent.ParentId);
 
-                if (grandparent.ParentName != null)
+                if (grandparent.ParentId != Guid.Empty)
                 {
                     throw new BusinessException("DynamicMenu:ExceededMenuLevelLimit").WithData("MaxLevel", 3);
                 }
