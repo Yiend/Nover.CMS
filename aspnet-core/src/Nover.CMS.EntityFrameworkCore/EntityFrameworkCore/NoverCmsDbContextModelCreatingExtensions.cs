@@ -31,12 +31,8 @@ namespace Nover.CMS.EntityFrameworkCore
 
                 /* Configure more properties here */
 
-                b.HasKey(e => new
-                {
-                    e.Name,
-                });
-
-                b.HasMany(x => x.MenuItems).WithOne().HasForeignKey(x => x.ParentName);
+                b.HasKey(e => e.Id);
+                b.HasMany(x => x.MenuItems).WithOne().HasForeignKey(x => x.ParentId);
             });
         }
     }
