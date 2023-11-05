@@ -7,7 +7,7 @@ namespace Nover.CMS.Application.Contracts.Dtos
     [Serializable]
     public class MenuItemDto : ExtensibleEntityDto
     {
-        public string ParentName { get; set; }
+        public Guid ParentId { get; set; }
 
         public bool InAdministration { get; set; }
 

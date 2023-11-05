@@ -102,12 +102,12 @@ export const getBreadcrumbList = (path: string, menuList: Menu.MenuOptions[]) =>
 		const getNodePath = (node: Menu.MenuOptions) => {
 			tempPath.push(node);
 			// 找到符合条件的节点，通过throw终止掉递归
-			if (node.path === path) {
+			if (node.url === path) {
 				throw new Error("GOT IT!");
 			}
-			if (node.children && node.children.length > 0) {
-				for (let i = 0; i < node.children.length; i++) {
-					getNodePath(node.children[i]);
+			if (node.menuItems && node.menuItems.length > 0) {
+				for (let i = 0; i < node.menuItems.length; i++) {
+					getNodePath(node.menuItems[i]);
 				}
 				// 当前节点的子节点遍历完依旧没找到，则删除路径中的该节点
 				tempPath.pop();
@@ -133,8 +133,8 @@ export const findAllBreadcrumb = (menuList: Menu.MenuOptions[]): { [key: string]
 	let handleBreadcrumbList: any = {};
 	const loop = (menuItem: Menu.MenuOptions) => {
 		// 下面判断代码解释 *** !item?.children?.length   ==>   (item.children && item.children.length > 0)
-		if (menuItem?.children?.length) menuItem.children.forEach(item => loop(item));
-		else handleBreadcrumbList[menuItem.path] = getBreadcrumbList(menuItem.path, menuList);
+		if (menuItem?.menuItems?.length) menuItem.menuItems.forEach(item => loop(item));
+		else handleBreadcrumbList[menuItem.url] = getBreadcrumbList(menuItem.url, menuList);
 	};
 	menuList.forEach(item => loop(item));
 	return handleBreadcrumbList;
@@ -148,8 +148,8 @@ export const findAllBreadcrumb = (menuList: Menu.MenuOptions[]): { [key: string]
  */
 export function handleRouter(routerList: Menu.MenuOptions[], newArr: string[] = []) {
 	routerList.forEach((item: Menu.MenuOptions) => {
-		typeof item === "object" && item.path && newArr.push(item.path);
-		item.children && item.children.length && handleRouter(item.children, newArr);
+		typeof item === "object" && item.url && newArr.push(item.url);
+		item.menuItems && item.menuItems.length && handleRouter(item.menuItems, newArr);
 	});
 	return newArr;
 }

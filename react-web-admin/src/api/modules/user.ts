@@ -66,5 +66,5 @@ export const getAuthorButtons = () => {
 
 // * 获取菜单列表
 export const getMenuList = () => {
-	return http.get<Menu.MenuOptions[]>(`/menu/list`);
+	return http.get<Menu.MenuOptions[]>(`/api/dynamic-menu/menu-item`);
 };
