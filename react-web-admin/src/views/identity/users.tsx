@@ -6,9 +6,7 @@ import { useRef } from "react";
 
 export const waitTimePromise = async (time: number = 100) => {
 	return new Promise(resolve => {
-		setTimeout(() => {
-			resolve(true);
-		}, time);
+		setTimeout(() => resolve(true), time);
 	});
 };
 
@@ -86,7 +84,7 @@ const columns: ProColumns<GithubIssueItem>[] = [
 		renderFormItem: (_, { defaultRender }) => {
 			return defaultRender(_);
 		},
-		render: (_, record) => (
+		render: (_: any, record: any) => (
 			<Space>
 				{record.labels.map(({ name, color }) => (
 					<Tag color={color} key={name}>
@@ -110,7 +108,7 @@ const columns: ProColumns<GithubIssueItem>[] = [
 		valueType: "dateRange",
 		hideInTable: true,
 		search: {
-			transform: value => {
+			transform: (value: any) => {
 				return {
 					startTime: value[0],
 					endTime: value[1]
@@ -122,7 +120,7 @@ const columns: ProColumns<GithubIssueItem>[] = [
 		title: "操作",
 		valueType: "option",
 		key: "option",
-		render: (text, record, _, action) => [
+		render: (text: any, record: any, _: any, action: any) => [
 			<a key="editable" onClick={() => action?.startEditable?.(record.id)}>
 				编辑
 			</a>,
@@ -148,7 +146,7 @@ const Users = () => {
 			columns={columns}
 			actionRef={actionRef}
 			cardBordered
-			request={async (params, sort, filter) => {
+			request={async (params: any, sort: any, filter: any) => {
 				console.log(params, sort, filter);
 				await waitTime(2000);
 				return {};
@@ -159,7 +157,7 @@ const Users = () => {
 			columnsState={{
 				persistenceKey: "pro-table-singe-demos",
 				persistenceType: "localStorage",
-				onChange(value) {
+				onChange(value: any) {
 					console.log("value: ", value);
 				}
 			}}
@@ -174,7 +172,7 @@ const Users = () => {
 			}}
 			form={{
 				// 由于配置了 transform，提交的参与与定义的不同这里需要转化一下
-				syncToUrl: (values, type) => {
+				syncToUrl: (values: any, type: any) => {
 					if (type === "get") {
 						return {
 							...values,
@@ -186,7 +184,7 @@ const Users = () => {
 			}}
 			pagination={{
 				pageSize: 5,
-				onChange: page => console.log(page)
+				onChange: (page: any) => console.log(page)
 			}}
 			dateFormatter="string"
 			headerTitle="高级表格"
